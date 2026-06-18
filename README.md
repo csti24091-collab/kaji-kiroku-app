@@ -18,21 +18,21 @@ flowchart LR
 ### クラス図
 ```mermaid
 classDiagram
-    class ChoreManager {
-        +List~Chore~ chores
-        +addChore(name: String)
-        +getChoresSortedByDays() List~Chore~
-        +deleteChore(id: String)
+    class 家事マネージャー {
+        +リスト~家事~ 家事リスト
+        +家事追加(名前: 文字列)
+        +経過日数順の家事リスト取得() リスト~家事~
+        +家事削除(ID: 文字列)
     }
 
-    class Chore {
-        -String id
-        -String name
-        -Date lastCompletedDate
-        +updateDateToToday()
+    class 家事 {
+        -文字列 id
+        -文字列 名前
+        -日付 最終完了日
+        +日付を今日に更新する()
     }
 
-    ChoreManager "1" *-- "0..*" Chore : manages
+    家事マネージャー "1" *-- "0..*" 家事 : 管理する
 ```
 ### シーケンス図
 ```mermaid
