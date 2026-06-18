@@ -3,9 +3,9 @@
 
 一人暮らしにおける「名もなき家事」や定期的な掃除の「最後にいつやったか」を記録し、次にやるべき家事を可視化するWebアプリケーションです。
 
-## 4. 設計図 (Architecture Diagrams)
+## 設計図 (Architecture Diagrams)
 
-### 4.1 ユースケース図
+### ユースケース図
 ```mermaid
 flowchart LR
     User((ユーザ))
@@ -15,6 +15,7 @@ flowchart LR
     User --> UC3[「今日やった」ボタンを押す]
     User --> UC4[不要になった家事を削除する]
 ```
+### クラス図
 ```mermaid
 classDiagram
     class ChoreManager {
@@ -33,6 +34,7 @@ classDiagram
 
     ChoreManager "1" *-- "0..*" Chore : manages
 ```
+### シーケンス図
 ```mermaid
 sequenceDiagram
     autonumber
@@ -71,6 +73,7 @@ sequenceDiagram
         UI-->>User: エラー（「更新できませんでした」等）を表示
     end
 ```
+### 状態遷移図
 ```mermaid
 stateDiagram-v2
     [*] --> 未実施 : 家事を新規登録する
