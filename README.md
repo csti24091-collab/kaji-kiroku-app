@@ -14,6 +14,8 @@ flowchart LR
     User --> UC2[経過日数順で家事一覧を見る]
     User --> UC3[「今日やった」ボタンを押す]
     User --> UC4[不要になった家事を削除する]
+```
+```mermaid
 classDiagram
     class ChoreManager {
         +List~Chore~ chores
@@ -30,6 +32,8 @@ classDiagram
     }
 
     ChoreManager "1" *-- "0..*" Chore : manages
+```
+```mermaid
 sequenceDiagram
     autonumber
     actor User as ユーザ
@@ -66,6 +70,8 @@ sequenceDiagram
         Ctrl-->>UI: エラーメッセージを渡す
         UI-->>User: エラー（「更新できませんでした」等）を表示
     end
+```
+```mermaid
 stateDiagram-v2
     [*] --> 未実施 : 家事を新規登録する
  
@@ -75,5 +81,6 @@ stateDiagram-v2
  
     未実施 --> 削除済み : 削除操作を行う
     実施済み --> 削除済み : 削除操作を行う
+```
     
     削除済み --> [*]
