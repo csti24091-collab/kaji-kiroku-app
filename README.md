@@ -1,0 +1,1 @@
+# kaji-kiroku-app
